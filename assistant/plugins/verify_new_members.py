@@ -75,7 +75,7 @@ __Click on Join Now and Unmute yourself.__ """
             [
                 InlineKeyboardButton(
                     text="Join Now",
-                    url="https://t.me/TheUserGe"),
+                    url="https://t.me/The_Tech_Hackers"),
                 InlineKeyboardButton(
                     text="Unmute Me",
                     callback_data=f"joined_unmute({user.id} {msg.message_id})")
@@ -87,7 +87,7 @@ __Click on Join Now and Unmute yourself.__ """
 
 async def wc_msg(user):
     """ arguments and reply_markup for sending after verify """
-    gif = await bot.get_messages("UserGeOt", 510608)
+    gif = await bot.get_messages("Hacking_burners", 9996)
     file_id = gif.animation.file_id
     file_ref = gif.animation.file_ref
     text = f""" **Welcome** {user.mention},
@@ -97,7 +97,7 @@ __Check out the Button below. and feel free to ask here.__ 🤘 """
             [
                 InlineKeyboardButton(
                     text="More info.",
-                    url="https://t.me/usergeot/527524"
+                    url="https://t.me/Hacking_burners/24"
                 )
             ]
         ]
@@ -141,7 +141,7 @@ async def _on_joined_unmute_(_, c_q: CallbackQuery):
         get_user = await bot.get_chat_member(chat_id, user_id)
         if get_user.restricted_by and get_user.restricted_by.id == bot_id:
             try:
-                await bot.get_chat_member("TheUserGe", user_id)
+                await bot.get_chat_member("The_Tech_Hackers", user_id)
             except UserNotParticipant:
                 await c_q.answer(
                     "Click on Join Now button to Join our Updates Channel"
